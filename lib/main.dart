@@ -1,3 +1,6 @@
+import 'package:bookly_app/constants.dart';
+import 'package:bookly_app/core/routes/generator_routes.dart';
+import 'package:bookly_app/core/routes/page_route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -10,6 +13,13 @@ class BooklyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp();
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData().copyWith(
+        scaffoldBackgroundColor: kPrimaryColor,
+      ),
+      initialRoute: PageRouteName.initial,
+      onGenerateRoute: GeneratorRoutes.onGenerator,
+    );
   }
 }
