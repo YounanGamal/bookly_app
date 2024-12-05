@@ -11,7 +11,6 @@ class FeatureListViewItem extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          color: Colors.red,
           image: const DecorationImage(
             image: AssetImage(AppImages.imageBookHigh),
             fit: BoxFit.fill,

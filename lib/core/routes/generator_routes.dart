@@ -10,7 +10,8 @@ class GeneratorRoutes {
         return MaterialPageRoute(
           builder: (context) => SplashView(),
           settings: settings,
-        );case PageRouteName.initial:
+        );
+      case PageRouteName.initial:
         return MaterialPageRoute(
           builder: (context) => HomeView(),
           settings: settings,
