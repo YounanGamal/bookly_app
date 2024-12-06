@@ -7,9 +7,11 @@ class BookRating extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(
           Icons.star,
+          size: 14,
           color: Color(0xffFFDD4F),
         ),
         SizedBox(
@@ -22,9 +24,12 @@ class BookRating extends StatelessWidget {
         SizedBox(
           width: 4,
         ),
-        Text(
-          '(2390)',
-          style: Style.textStyle14,
+        Opacity(
+          opacity: 0.5,
+          child: Text(
+            '(2390)',
+            style: Style.textStyle14,
+          ),
         ),
       ],
     );
