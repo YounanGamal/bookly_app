@@ -1,7 +1,7 @@
 import 'package:bookly_app/constants.dart';
 import 'package:flutter/material.dart';
 
-class Style {
+abstract class Style {
   static const textStyle18 = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.w600,
@@ -23,7 +23,7 @@ class Style {
     color: Colors.white,
   ); static const textStyle30 = TextStyle(
     fontSize: 30,
-    fontWeight: FontWeight.normal,
+    fontWeight: FontWeight.w900,
     fontFamily: kGtSectraFine,
     color: Colors.white,
   );
