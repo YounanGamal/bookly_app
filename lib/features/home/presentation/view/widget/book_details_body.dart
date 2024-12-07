@@ -1,4 +1,6 @@
 import 'package:bookly_app/core/theme/style.dart';
+import 'package:bookly_app/core/widget/custom_button.dart';
+import 'package:bookly_app/features/home/presentation/view/widget/book_action.dart';
 import 'package:bookly_app/features/home/presentation/view/widget/book_rating.dart';
 import 'package:bookly_app/features/home/presentation/view/widget/custom_book_details_app_bar.dart';
 import 'package:bookly_app/features/home/presentation/view/widget/custom_book_item.dart';
@@ -37,16 +39,15 @@ class BookDetailsBody extends StatelessWidget {
             child: Text(
               'Rudyard Kipling',
               style: Style.textStyle18.copyWith(
-                color: Color(0xff707070),
-                fontStyle: FontStyle.italic
-              ),
+                  color: Color(0xff707070), fontStyle: FontStyle.italic),
             ),
           ),
           SizedBox(
             height: 14,
           ),
           BookRating(),
-
+          SizedBox(height: 37,),
+          BookAction(),
         ],
       ),
     );
