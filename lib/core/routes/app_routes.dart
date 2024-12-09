@@ -15,7 +15,8 @@ class AppRoutes {
       GoRoute(
         path: PageRouteName.homeView,
         builder: (context, state) => HomeView(),
-      ), GoRoute(
+      ),
+      GoRoute(
         path: PageRouteName.searchView,
         builder: (context, state) => SearchView(),
       ),

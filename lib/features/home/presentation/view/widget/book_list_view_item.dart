@@ -63,7 +63,6 @@ class BookListViewItem extends StatelessWidget {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      
                       children: [
                         Text(
                           '19.99 €',

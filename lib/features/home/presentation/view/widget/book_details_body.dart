@@ -16,16 +16,16 @@ class BookDetailsBody extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: const[
+              children: const [
                 CustomBookDetailsAppBar(),
                 BookDetailsSection(),
-                 Expanded(
+                Expanded(
                   child: SizedBox(
                     height: 50,
                   ),
                 ),
                 SimilarBooksSection(),
-                 SizedBox(
+                SizedBox(
                   height: 40,
                 ),
               ],
