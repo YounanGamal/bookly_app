@@ -15,7 +15,7 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: media.width * 0.17),
-          child: CustomBookImage.CustomBookImage(),
+          child: const CustomBookImage.CustomBookImage(),
         ),
         const SizedBox(
           height: 43,
@@ -34,7 +34,7 @@ class BookDetailsSection extends StatelessWidget {
           child: Text(
             'Rudyard Kipling',
             style: Style.textStyle18.copyWith(
-                color: Color(0xff707070), fontStyle: FontStyle.italic),
+                color: const Color(0xff707070), fontStyle: FontStyle.italic),
           ),
         ),
         const SizedBox(
@@ -44,7 +44,7 @@ class BookDetailsSection extends StatelessWidget {
         const SizedBox(
           height: 37,
         ),
-        BookAction(),
+        const BookAction(),
       ],
     );
   }

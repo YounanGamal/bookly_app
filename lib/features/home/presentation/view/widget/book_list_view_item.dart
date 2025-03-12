@@ -32,7 +32,7 @@ class BookListViewItem extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 30,
             ),
             Expanded(
@@ -54,7 +54,7 @@ class BookListViewItem extends StatelessWidget {
                     const SizedBox(
                       height: 2,
                     ),
-                    Text(
+                    const Text(
                       'J.K. Rowling',
                       style: Style.textStyle14,
                     ),
@@ -63,7 +63,6 @@ class BookListViewItem extends StatelessWidget {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      
                       children: [
                         Text(
                           '19.99 €',
@@ -71,7 +70,7 @@ class BookListViewItem extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        BookRating(),
+                        const BookRating(),
                       ],
                     ),
                   ],

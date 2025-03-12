@@ -9,9 +9,9 @@ class SearchView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Search'),
+        title: const Text('Search'),
       ),
-      body: SearchViewBody(),
+      body: const SearchViewBody(),
     );
   }
 }
