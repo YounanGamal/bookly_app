@@ -1,3 +1,4 @@
+import 'package:bookly_app/features/home/data/models/bookly_model/book_model.dart';
 import 'package:bookly_app/features/home/presentation/view/widget/book_action.dart';
 import 'package:bookly_app/features/home/presentation/view/widget/book_rating.dart';
 import 'package:bookly_app/features/home/presentation/view/widget/custom_book_item.dart';
@@ -6,7 +7,11 @@ import 'package:flutter/material.dart';
 import '../../../../../core/theme/style.dart';
 
 class BookDetailsSection extends StatelessWidget {
-  const BookDetailsSection({super.key});
+  const BookDetailsSection({
+    super.key,
+    required this.bookModel,
+  });
+  final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {
@@ -15,13 +20,16 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: media.width * 0.17),
-          child: const CustomBookImage.CustomBookImage(),
+          child: CustomBookImage(
+            imageUrl: bookModel.volumeInfo.imageLinks.thumbnail,
+          ),
         ),
         const SizedBox(
           height: 43,
         ),
         Text(
-          'The Jungle Book',
+          textAlign: TextAlign.center,
+          bookModel.volumeInfo.title ?? '',
           style: Style.textStyle30.copyWith(
             fontWeight: FontWeight.bold,
           ),
@@ -32,7 +40,8 @@ class BookDetailsSection extends StatelessWidget {
         Opacity(
           opacity: 0.7,
           child: Text(
-            'Rudyard Kipling',
+            textAlign: TextAlign.center,
+            bookModel.volumeInfo.authors?[0] ?? '',
             style: Style.textStyle18.copyWith(
                 color: const Color(0xff707070), fontStyle: FontStyle.italic),
           ),
@@ -40,7 +49,10 @@ class BookDetailsSection extends StatelessWidget {
         const SizedBox(
           height: 14,
         ),
-        const BookRating(),
+        BookRating(
+          count: bookModel.volumeInfo.pageCount!,
+          rating: bookModel.volumeInfo.contentVersion!.substring(0, 3),
+        ),
         const SizedBox(
           height: 37,
         ),

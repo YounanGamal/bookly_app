@@ -5,16 +5,16 @@ import 'package:equatable/equatable.dart';
 
 part 'feadured_books_state.dart';
 
-class FeaduredBooksCubit extends Cubit<FeaduredBooksState> {
-  FeaduredBooksCubit(this.homeRepo) : super(FeaduredBooksInitial());
+class FeaturedBooksCubit extends Cubit<FeaturedBooksState> {
+  FeaturedBooksCubit(this.homeRepo) : super(FeaturedBooksInitial());
   final HomeRepo homeRepo;
   Future<void> fetchFeaturedBooks() async {
-    emit(FeaduredBooksLoading());
+    emit(FeaturedBooksLoading());
     var result = await homeRepo.fetchFeaturedBooks();
     result.fold(
-      (failure) => emit(FeaduredBooksFailure(failure.errorMessage)),
+      (failure) => emit(FeaturedBooksFailure(failure.errorMessage)),
       (books) => emit(
-        FeaduredBooksSuccess(books),
+        FeaturedBooksSuccess(books),
       ),
     );
   }

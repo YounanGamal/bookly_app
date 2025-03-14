@@ -8,3 +8,15 @@ sealed class NewsetBooksState extends Equatable {
 }
 
 final class NewsetBooksInitial extends NewsetBooksState {}
+
+final class NewsetBooksLoading extends NewsetBooksState {}
+
+final class NewsetBooksFailure extends NewsetBooksState {
+  final String errorMessage;
+  const NewsetBooksFailure(this.errorMessage);
+}
+
+final class NewsetBooksSuccess extends NewsetBooksState {
+  final List<BookModel> books;
+  const NewsetBooksSuccess(this.books);
+}

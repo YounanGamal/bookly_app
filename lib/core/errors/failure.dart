@@ -25,14 +25,14 @@ class ServerFailure extends Failure {
       case DioExceptionType.cancel:
         return const ServerFailure('Request to API server was canceled');
       case DioExceptionType.connectionError:
-        return const ServerFailure('Connection error');
+        return const ServerFailure('No Internet Connection');
       case DioExceptionType.unknown:
         if (dioError.message!.contains('SocketException')) {
           return const ServerFailure('No internet connection');
+        } else {
+          return const ServerFailure(
+              'Unexpected error occurred, please try again!');
         }
-        return const ServerFailure(
-            'Unexpected error occurred, please try again!');
-
       default:
         return const ServerFailure(
             'Opps there was an error, please try later!');

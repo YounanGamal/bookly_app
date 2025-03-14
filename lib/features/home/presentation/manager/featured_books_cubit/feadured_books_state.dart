@@ -1,22 +1,22 @@
 part of 'feadured_books_cubit.dart';
 
-sealed class FeaduredBooksState extends Equatable {
-  const FeaduredBooksState();
+sealed class FeaturedBooksState extends Equatable {
+  const FeaturedBooksState();
 
   @override
   List<Object> get props => [];
 }
 
-final class FeaduredBooksInitial extends FeaduredBooksState {}
+final class FeaturedBooksInitial extends FeaturedBooksState {}
 
-final class FeaduredBooksLoading extends FeaduredBooksState {}
+final class FeaturedBooksLoading extends FeaturedBooksState {}
 
-final class FeaduredBooksFailure extends FeaduredBooksState {
-  final String errMessage;
-  const FeaduredBooksFailure(this.errMessage);
+final class FeaturedBooksFailure extends FeaturedBooksState {
+  final String errorMessage;
+  const FeaturedBooksFailure(this.errorMessage);
 }
 
-final class FeaduredBooksSuccess extends FeaduredBooksState {
+final class FeaturedBooksSuccess extends FeaturedBooksState {
   final List<BookModel> books;
-  const FeaduredBooksSuccess(this.books);
+  const FeaturedBooksSuccess(this.books);
 }
